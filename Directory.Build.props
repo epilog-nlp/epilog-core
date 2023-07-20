@@ -1,0 +1,46 @@
+<Project>
+  
+  <!-- Framework/Version Information -->
+  <PropertyGroup>
+    <Version>0.0.1-alpha</Version>
+    <FileVersion>$(Version)</FileVersion>
+  </PropertyGroup>
+
+  <!-- Debug/Build Concerns -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <DebugType>portable</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+  </PropertyGroup>  
+  
+  <!-- Packaging Information -->
+  <PropertyGroup>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright ©2023 Ian Schlarman</Copyright>
+    <Authors>Ian Schlarman</Authors>
+  </PropertyGroup>
+  
+  <!-- GitHub Details -->
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/epilog-nlp/epilog-core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/epilog-nlp/epilog-core.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>  
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <!-- Set Project Exclusions -->
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildProjectDirectory)/obj/**/*</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildProjectDirectory)/bin/**/*</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildProjectDirectory)/*.vspscc</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>

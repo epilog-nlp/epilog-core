@@ -1,0 +1,19 @@
+﻿<Project>
+
+  <!-- Imports Root Properties -->
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- Global Project Properties and Items -->
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>default</AnalysisMode>
+    <Deterministic>true</Deterministic>
+    <PathMap>$(RepoRoot)=C:\Git\epilog-core</PathMap>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+</Project>
